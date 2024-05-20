@@ -7,6 +7,7 @@ function Products() {
     fetch("https://fakestoreapi.com/products")
       .then((data) => data.json())
       .then((result) => setProducts(result));
+    console.log(setProducts);
   }, []);
 
   return (
@@ -14,17 +15,20 @@ function Products() {
       <h1 className="SectionTitle">Product Dashboard</h1>
       <Row>
         {products.map((product) => (
-          <Col xs={12} sm={6} md={4} lg={3}key={product.id}>
-            <Card style={{ width: "18rem" }}>
-              <Card.Img variant="top" src="holder.js/100px180" />
+          <Col xs={12} sm={6} md={4} lg={3} key={product.id}>
+            <Card style={{ width: "18rem" }} className="text-center">
+              <Card.Img
+                variant="top"
+                src={product.image}
+                className="cardImage"
+              />
               <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                <Card.Title>{product.title}</Card.Title>
+                <Card.Text>RS{product.price}</Card.Text>
               </Card.Body>
+              <Card.Footer style={{ background: "white" }}>
+                <Button variant="primary">Add To Cart</Button>
+              </Card.Footer>
             </Card>
           </Col>
         ))}
