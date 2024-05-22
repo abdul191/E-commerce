@@ -11,16 +11,17 @@ function Products() {
   }, []);
 
   return (
-    <div>
-      <h1 className="SectionTitle">Product Dashboard</h1>
-      <Row>
+    <div className="text-center">
+      <h1 className="my-3">Product Dashboard</h1>
+      <Row className="px-5 m-0">
         {products.map((product) => (
-          <Col xs={12} sm={6} md={4} lg={3} key={product.id}>
-            <Card style={{ width: "18rem" }} className="text-center">
+          <Col xs={12} sm={6} md={4} lg={3} key={product.id} className="my-3">
+            <Card style={{height:"100%"}}>
               <Card.Img
                 variant="top"
                 src={product.image}
-                className="cardImage"
+                className="mx-auto"
+                style={{width:"100px", height:"130px"}}
               />
               <Card.Body>
                 <Card.Title>{product.title}</Card.Title>

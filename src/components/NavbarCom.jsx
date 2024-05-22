@@ -4,7 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
 const NavbarCom = () => {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className="bg-body-tertiary px-5" >
       <Container fluid>
         <Navbar.Brand href="#">E-commerce</Navbar.Brand>
         <Navbar.Toggle />

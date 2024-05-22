@@ -1,5 +1,6 @@
+import Products from "./Products";
 function Dashboard() {
-  return <div>Dashboard</div>;
+  return <><Products/></>;
 }
 
 export default Dashboard;
