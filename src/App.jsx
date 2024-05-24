@@ -1,5 +1,4 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-// import Products from "./components/Products";
 import "./App.css";
 import RootLayout from "./components/RootLayout";
 import Dashboard from "./components/Dashboard";
